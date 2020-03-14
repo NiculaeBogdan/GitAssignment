@@ -9,7 +9,7 @@ package testgit;
  *
  * @author bogdann
  */
-public class OLXServices {
+public class OLXServices implements CheckAdvertiseRules{
     private String nameOfTheService;
     private double priceOfTheService;
     
@@ -17,5 +17,16 @@ public class OLXServices {
         this.nameOfTheService = nameOfTheService;
         this.priceOfTheService = priceOfTheService;
     }
+
+    @Override
+    public boolean isChecked() {
+        return this.priceOfTheService < 200000;
+    }
+
+    @Override
+    public String getAdvertiseInfo() {
+        return "The name of the service is: " + this.nameOfTheService + " and the price is: " + this.priceOfTheService;
+    }
+    
     
 }

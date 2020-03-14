@@ -17,6 +17,14 @@ public class TestGit {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Hello Git! The name of the license project is \"Freelance platform\".");
+        
+        String info = "Auto-Moto";
+        double price = 10000;
+        
+        OLXServices os = new OLXServices(info, price);
+        
+        System.out.println(os.getAdvertiseInfo());
+        System.out.println(os.isChecked());
     }
     
 }
